@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  //$("button").click(function(){
+   // $.get("http://mciapitest-hrd.appspot.com/api/v1/ajax/get_rt_data/",function(data,status){
+   //   alert("Data: " + data + "\nStatus: " + status);
+   url="http://mciapitest-hrd.appspot.com/api/v1/ajax/get_rt_data/" ;
+   //$.get("http://mciapitest-hrd.appspot.com/api/v1/ajax/get_rt_data/", function (jsonp) {
+     // alert('ok');
+    //eval(jsonp);
+    //});
+ // });
+ 
+ 
+ $("button").click(function(){
+ 
+   //$.ajax({
+      //url: url,
+      //dataType: 'json',
+      //success: function (data, status) {
+	//console.log(status);
+	//console.log(data);
+	//console.log('ok ' + $.parseJSON(data) );
+      //}
+      
+    $.get(url, function(data,status) {
+    console.log("Data " + data + "Status " + status);
+    console.log($.parseJSON(data));
+});
+    });
+ });
+ 
+//});
+</script>
+</head>
+<body>
+
+<button>button</button>
+
+</body>
+</html>
